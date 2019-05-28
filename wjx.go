@@ -1,20 +1,20 @@
 package main
 
 import (
-	"math/rand"
-	"time"
-	"strconv"
-	"os"
-	"log"
-	"strings"
-	"net/http"
-	"io/ioutil"
 	"bufio"
-	"io"
-	"net/url"
-	"fmt"
-	"encoding/json"
 	"crypto/tls"
+	"encoding/json"
+	"fmt"
+	"io"
+	"io/ioutil"
+	"log"
+	"math/rand"
+	"net/http"
+	"net/url"
+	"os"
+	"strconv"
+	"strings"
+	"time"
 )
 
 type AnswerFileContent struct {
@@ -405,4 +405,3 @@ func main() {
 		waitTime = time.Duration(randObj.Intn(10))
 	}
 }
-
