@@ -341,23 +341,23 @@ func postAnswer(postUrl, answer string, id int) error {
 
 func main() {
 
-	if len(os.Args) != 4 || len(os.Args) != 5 {
-		log.Fatal("参数错误，使用方法：./" + os.Args[0] + "  提交答案数量  " + "  试卷id" + "  答案模板  " + " 代理接口地址(可选)")
+	if len(os.Args) != 4 && len(os.Args) != 5 {
+		log.Fatal("参数错误，使用方法：" + os.Args[0] + "  提交答案数量  " + "  试卷id" + "  答案模板  " + " 代理接口地址(可选)")
 	}
 
 	counter, err := strconv.Atoi(os.Args[1])
 	if err != nil {
-		log.Fatal("参数错误，使用方法：./" + os.Args[0] + "  提交答案数量  " + "  试卷id" + " 答案模板" + " 代理接口地址(可选)")
+		log.Fatal("参数错误，使用方法：" + os.Args[0] + "  提交答案数量  " + "  试卷id" + " 答案模板" + " 代理接口地址(可选)")
 	}
 
 	id, err := strconv.Atoi(os.Args[2])
 	if err != nil {
-		log.Fatal("参数错误，使用方法：./" + os.Args[0] + "  提交答案数量  " + "  试卷id" + " 答案模板" + " 代理接口地址(可选)")
+		log.Fatal("参数错误，使用方法：" + os.Args[0] + "  提交答案数量  " + "  试卷id" + " 答案模板" + " 代理接口地址(可选)")
 	}
 
 	err = initAnswerFileContent(os.Args[3])
 	if err != nil {
-		log.Fatal("初始化答案失败,致命错误:" + err.Error() + "使用方法：./" + os.Args[0] + "  数量  " + "  试卷id" + " 答案模板" + " 代理接口地址(可选)")
+		log.Fatal("初始化答案失败,致命错误:" + err.Error() + "使用方法：" + os.Args[0] + "  数量  " + "  试卷id" + " 答案模板" + " 代理接口地址(可选)")
 	}
 
 	proxyUrl := ""
