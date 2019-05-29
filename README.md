@@ -32,7 +32,7 @@
 3 ABCD 4
 4 ABC 4
 5 ACD 5
-6 CDE 5   => 表示期望 C、D、E答案的出现，该题共有 ABCDE 5个答案选项
+6 CDE 5   => 表示答案 C、D、E为期望答案，该题共有 ABCDE 5个答案选项
 7 BCD 5
 8 BCD 5
 9 BCDE 5
